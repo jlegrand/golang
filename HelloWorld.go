@@ -10,7 +10,8 @@ func main() {
 	//defvar()
 	//loop()
 	//switchcase()
-	forloop()
+	//forloop()
+	gotofunc()
 
 }
 
@@ -107,4 +108,21 @@ func forloop() {
 	for i, x := range numbers {
 		fmt.Printf("value of x = %d at i = %d\n", x, i)
 	}
+}
+
+func gotofunc() {
+
+	var a int = 10
+
+LOOP:
+	for a < 20 {
+		if a == 15 {
+			a = a + 1
+			goto LOOP
+		}
+
+		fmt.Printf("value of a : %d\n", a)
+		a++
+	}
+
 }
