@@ -9,7 +9,8 @@ func main() {
 
 	//defvar()
 	//loop()
-	switchcase()
+	//switchcase()
+	forloop()
 
 }
 
@@ -83,5 +84,25 @@ func switchcase() {
 		fmt.Println("Well done")
 	default:
 		fmt.Println("Invalid grade")
+	}
+}
+
+func forloop() {
+
+	var a int
+	var b int = 15
+	numbers := [6]int{1,2,3,5}
+
+	for a := 0; a < 10; a++ {
+		fmt.Printf("value of a: %d\n", a)
+	}
+
+	for a < b {
+		a++
+		fmt.Printf("value of a: %d\n", a)
+	}
+
+	for i,x:= range numbers {
+		fmt.Printf("value of x = %d at i = %d\n", x,i)
 	}
 }
