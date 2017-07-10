@@ -7,7 +7,9 @@ import (
 
 func main() {
 
-	defvar()
+	//defvar()
+	//loop()
+	switchcase()
 
 }
 
@@ -40,4 +42,46 @@ func defvar() {
 
 	const LENGTH int = 10
 
+}
+
+func loop() {
+	var a int = 10
+
+	if a < 20 {
+		fmt.Printf("a is less than 20\n")
+	}
+
+	if limit := 8; a < limit {
+		fmt.Printf("a is less than %d\n", limit)
+	} else if limit = 5; a > limit {
+		fmt.Printf("a is greater than %d\n", limit)
+	} else {
+		fmt.Printf("a is less than %d\n", limit)
+	}
+}
+
+func switchcase() {
+
+	var grade string = "B"
+	var marks int = 80
+
+	switch marks {
+	case 90:
+		grade = "A"
+	case 80:
+		grade = "B"
+	case 50, 60, 70:
+		grade = "C"
+	default:
+		grade = "D"
+	}
+
+	switch {
+	case grade == "A":
+		fmt.Println("Excellent")
+	case grade == "B", grade == "C":
+		fmt.Println("Well done")
+	default:
+		fmt.Println("Invalid grade")
+	}
 }
