@@ -18,6 +18,7 @@ func main() {
 	//boucles.Gotofunc()
 
 	fmt.Println(fonction.Max(10, 5))
+	fmt.Println(fonction.Swap("10", "5"))
 
 }
 

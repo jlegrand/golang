@@ -13,3 +13,9 @@ func max(num1, num2 int) (result int) {
 func Max(num1, num2 int) int {
 	return max(num1, num2)
 }
+
+func Swap(x, y string) (a, b string){
+	a = y
+	b = x
+	return
+}
