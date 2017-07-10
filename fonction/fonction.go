@@ -46,3 +46,32 @@ func returnAFunction() Stringy {
 func TakesAFunction(foo Stringy) {
 	fmt.Println("resultat de la fontion de type Stringy : ", foo())
 }
+
+// Calculatrice tordue
+type Operator func(int, int) int
+
+func Operation(op rune) Operator {
+
+	var fonction Operator
+
+	switch op {
+	case '+':
+		fonction = func(a, b int) int {return a + b}
+	case '-':
+		fonction =  func(a, b int) int {return a - b}
+	case '*':
+		fonction =  func(a, b int) int {return a * b}
+	case '/':
+		fonction =  func(a, b int) int {return a / b}
+	default:
+		fmt.Println("Not impelmented")
+	}
+
+	return fonction
+}
+
+func Calcul(op rune, a, b int) int {
+
+	return Operation(op)(a, b)
+
+}
