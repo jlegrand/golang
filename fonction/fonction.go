@@ -50,9 +50,7 @@ func TakesAFunction(foo Stringy) {
 // Calculatrice tordue
 type Operator func(int, int) int
 
-func Operation(op rune) Operator {
-
-	var fonction Operator
+func Operation(op rune) (fonction Operator) {
 
 	switch op {
 	case '+':
@@ -64,10 +62,10 @@ func Operation(op rune) Operator {
 	case '/':
 		fonction =  func(a, b int) int {return a / b}
 	default:
-		fmt.Println("Not impelmented")
+		fmt.Println("Not implemented")
 	}
 
-	return fonction
+	return
 }
 
 func Calcul(op rune, a, b int) int {
