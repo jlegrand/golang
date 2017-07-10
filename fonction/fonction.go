@@ -1,14 +1,13 @@
 package fonction
 
-func max(num1, num2 int) int {
-	var result int
+func max(num1, num2 int) (result int) {
 
 	if (num1 > num2) {
 		result = num1
 	} else {
 		result = num2
 	}
-	return result
+	return
 }
 
 func Max(num1, num2 int) int {
