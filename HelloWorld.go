@@ -20,7 +20,7 @@ func main() {
 
 	//fmt.Println(fonction.Max(10, 5))
 	//fmt.Println(fonction.Swap("10", "5"))
-	fonction.Anonymous()
+	//fonction.Anonymous()
 
 	//pointers.Swap(10, 5)
 

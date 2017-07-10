@@ -33,3 +33,16 @@ func Anonymous() {
 	fmt.Println(getSquareRoot(9))
 }
 
+// déf un nouveau type
+type Stringy func() string
+
+func returnAFunction() Stringy {
+	return func() string {
+		fmt.Println("A l'interieur d'une Stringy fontion")
+		return "bar"
+	}
+}
+
+func TakesAFunction(foo Stringy) {
+	fmt.Println("resultat de la fontion de type Stringy : ", foo())
+}
