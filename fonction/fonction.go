@@ -47,33 +47,6 @@ func TakesAFunction(foo Stringy) {
 	fmt.Println("resultat de la fontion de type Stringy : ", foo())
 }
 
-// Calculatrice tordue
-type Operator func(int, int) int
-
-func Operation(op rune) (fonction Operator) {
-
-	switch op {
-	case '+':
-		fonction = func(a, b int) int { return a + b }
-	case '-':
-		fonction = func(a, b int) int { return a - b }
-	case '*':
-		fonction = func(a, b int) int { return a * b }
-	case '/':
-		fonction = func(a, b int) int { return a / b }
-	default:
-		fmt.Println("Not implemented")
-	}
-
-	return
-}
-
-func Calcul(op rune, a, b int) int {
-
-	return Operation(op)(a, b)
-
-}
-
 func FonctionVariadique(is ...int) {
 	for i := 0; i < len(is); i++ {
 		fmt.Println(is[i])
