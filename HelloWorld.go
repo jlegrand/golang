@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/jlegrand/golang/exercices"
+	"github.com/jlegrand/golang/basics"
 )
 
 func main() {
@@ -55,8 +55,12 @@ func main() {
 	time.Sleep(22 * time.Second)*/
 
 	//basics.Chan()
-	//exercices.Primary2()
 	//basics.Select()
-	exercices.MakeCakeAndSend()
+
+	//exercices.Primary2()
+
+	//exercices.MakeCakeAndSend()
+
+	basics.WaitGroup()
 
 }
