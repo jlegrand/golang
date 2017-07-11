@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/jlegrand/golang/basics"
+	"github.com/jlegrand/golang/exercices"
 )
 
 func main() {
@@ -54,6 +54,7 @@ func main() {
 	}
 	time.Sleep(22 * time.Second)*/
 
-	basics.Chan()
+	//basics.Chan()
+	exercices.Primary()
 
 }
