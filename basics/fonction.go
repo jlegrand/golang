@@ -1,4 +1,4 @@
-package fonction
+package basics
 
 import (
 	"math"

@@ -2,51 +2,47 @@
 package main
 
 import (
-	//"fmt"
-	//"github.com/jlegrand/golang/boucles"
-	//"github.com/jlegrand/golang/variables"
-	//"github.com/jlegrand/golang/pointers"
-	//"github.com/jlegrand/golang/fonction"
+	//"github.com/jlegrand/golang/basics"
 	"github.com/jlegrand/golang/exercices"
 	"fmt"
 )
 
 func main() {
 
-	//variables.Defvar()
+	//basics.Defvar()
 
-	//boucles.Loop()
-	//boucles.Switchcase()
-	//boucles.Forloop()
-	//boucles.Gotofunc()
+	//basics.Loop()
+	//basics.Switchcase()
+	//basics.Forloop()
+	//basics.Gotofunc()
 
-	//fmt.Println(fonction.Max(10, 5))
-	//fmt.Println(fonction.Swap("10", "5"))
-	//fonction.Anonymous()
-	//fmt.Println(fonction.Calcul('/', 12, 5))
-	//fonction.Closure()
+	//fmt.Println(basics.Max(10, 5))
+	//fmt.Println(basics.Swap("10", "5"))
+	//basics.Anonymous()
+	//fmt.Println(basics.Calcul('/', 12, 5))
+	//basics.Closure()
 
-	/*fonction.FonctionVariadique(1)
-	fonction.FonctionVariadique(1, 2)
-	fonction.FonctionVariadique(1,2,3)
+	/*basics.FonctionVariadique(1)
+	basics.FonctionVariadique(1, 2)
+	basics.FonctionVariadique(1,2,3)
 	// éclatement de la structure avec ...
-	fonction.FonctionVariadique([]int{9,8,7,6,5,4,3,2,1}...)*/
+	basics.FonctionVariadique([]int{9,8,7,6,5,4,3,2,1}...)*/
 
 	/*var t1 = []int{1,2,3}
 	var t2 = []int{4,5,6}
 	var t []int = append(t1,t2...)
 	fmt.Println(t)*/
 
-	//pointers.Swap(10, 5)
+	//basics.Swap(10, 5)
 
-	//variables.Manipulate()
-	//variables.Array()
-	//variables.Slice()
-	//variables.Append()
+	//basics.Manipulate()
+	//basics.Array()
+	//basics.Slice()
+	//basics.Append()
 
 	//fmt.Println(exercice1([]int{1, 2, 3, 7, 8, 9}, 5))
 
-	//variables.MapBasics()
+	//basics.MapBasics()
 
 	fmt.Println(exercices.Calcul('+', 3, 5 ))
 

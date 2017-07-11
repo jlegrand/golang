@@ -1,4 +1,4 @@
-package boucles
+package basics
 
 import "fmt"
 
