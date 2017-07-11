@@ -48,7 +48,12 @@ func main() {
 
 	//basics.OrderedDefer()
 
-	basics.Routine()
+	/*var i int = 0
+	for i < 20 {
+		basics.Announce("test", 2 * time.Second)
+	}
+	time.Sleep(22 * time.Second)*/
+
+	basics.Chan()
 
 }
-
