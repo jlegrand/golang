@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/jlegrand/golang/exercices"
+	"github.com/jlegrand/golang/basics"
 )
 
 func main() {
@@ -42,9 +42,9 @@ func main() {
 
 	//basics.MapBasics()
 
-	exercices.Calcul('t', 3, 5 )
+	//exercices.Calcul('t', 3, 5 )
 
-
+	basics.Defer()
 
 }
 

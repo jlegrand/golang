@@ -23,7 +23,7 @@ func Operation(op rune) (fonction Operator) {
 	case '/':
 		fonction = func(a, b int) int { return a / b }
 	default:
-		fmt.Println("Not implemented")
+		panic("Not implemented")
 	}
 
 	return
