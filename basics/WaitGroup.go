@@ -21,6 +21,8 @@ func WaitGroup() {
 		// increment counter
 		wg.Add(1)
 
+		// need to pass url as argument to avoid to work on same url value
+		// closure ?
 		go func(url string) {
 			// Decrement wait group
 			defer wg.Done()

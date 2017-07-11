@@ -2,8 +2,6 @@ package basics
 
 import (
 	"fmt"
-	"time"
-	"strconv"
 )
 
 func Chan() {
