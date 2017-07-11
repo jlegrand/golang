@@ -19,7 +19,7 @@ func Max(num1, num2 int) int {
 	return max(num1, num2)
 }
 
-func Swap(x, y string) (a, b string){
+func Swap(x, y string) (a, b string) {
 	a = y
 	b = x
 	return
@@ -54,13 +54,13 @@ func Operation(op rune) (fonction Operator) {
 
 	switch op {
 	case '+':
-		fonction = func(a, b int) int {return a + b}
+		fonction = func(a, b int) int { return a + b }
 	case '-':
-		fonction =  func(a, b int) int {return a - b}
+		fonction = func(a, b int) int { return a - b }
 	case '*':
-		fonction =  func(a, b int) int {return a * b}
+		fonction = func(a, b int) int { return a * b }
 	case '/':
-		fonction =  func(a, b int) int {return a / b}
+		fonction = func(a, b int) int { return a / b }
 	default:
 		fmt.Println("Not implemented")
 	}
@@ -72,4 +72,10 @@ func Calcul(op rune, a, b int) int {
 
 	return Operation(op)(a, b)
 
+}
+
+func FonctionVariadique(is ...int) {
+	for i := 0; i < len(is); i++ {
+		fmt.Println(is[i])
+	}
 }
