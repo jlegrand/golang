@@ -2,6 +2,7 @@ package exercices
 
 import (
 	"fmt"
+	"time"
 )
 
 func Primary() {
@@ -16,28 +17,41 @@ func Primary2() {
 
 	in := make(chan int)
 	out := make(chan int)
-	
-	primaryWithRoutine(in, out)
+	go primaryWithRoutine(in, out)
+
+	go func() {
+		for e := range out {
+			if e == -1 {
+				fmt.Println("********")
+			} else {
+				fmt.Println(e)
+			}
+		}
+	}()
 
 	in <- 3
-	in <- 100
+	in <- 10
 
-	for e := range out {
-		fmt.Println(e)
-	}
+	/*in <- 15
+	in <- 25*/
+
+	time.Sleep(20 * time.Second)
+
+
 }
 
 func primaryWithRoutine(in chan int, out chan int) () {
 
-	go func() {
+	//go func() {
 		min := <- in
 		max := <- in
 		c := search(min, max)
 		for e := range c {
 			out <- e
 		}
-		close(out)
-	}()
+		out <- -1
+		//close(out)
+	//}()
 }
 
 func search(min, max int) <-chan int {
