@@ -25,9 +25,11 @@ func main() {
 	//fmt.Println(fonction.Calcul('/', 12, 5))
 	//fonction.Closure()
 
-	variables.Manipulate()
-
 	//pointers.Swap(10, 5)
+
+	//variables.Manipulate()
+	//variables.Array()
+	variables.Slice()
 
 }
 
