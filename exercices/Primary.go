@@ -12,6 +12,34 @@ func Primary() {
 	}
 }
 
+func Primary2() {
+
+	in := make(chan int)
+	out := make(chan int)
+	
+	primaryWithRoutine(in, out)
+
+	in <- 3
+	in <- 100
+
+	for e := range out {
+		fmt.Println(e)
+	}
+}
+
+func primaryWithRoutine(in chan int, out chan int) () {
+
+	go func() {
+		min := <- in
+		max := <- in
+		c := search(min, max)
+		for e := range c {
+			out <- e
+		}
+		close(out)
+	}()
+}
+
 func search(min, max int) <-chan int {
 
 	c := make(chan int)

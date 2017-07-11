@@ -55,6 +55,6 @@ func main() {
 	time.Sleep(22 * time.Second)*/
 
 	//basics.Chan()
-	exercices.Primary()
+	exercices.Primary2()
 
 }
