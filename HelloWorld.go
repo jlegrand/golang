@@ -26,6 +26,7 @@ func main() {
 	fonction.FonctionVariadique(1)
 	fonction.FonctionVariadique(1, 2)
 	fonction.FonctionVariadique(1,2,3)
+	// éclatement de la structure avec ...
 	fonction.FonctionVariadique([]int{9,8,7,6,5,4,3,2,1}...)
 
 	//pointers.Swap(10, 5)
