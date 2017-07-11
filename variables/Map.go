@@ -15,4 +15,11 @@ func Basics() {
 	for country, capital := range countryCapitalMap {
 		fmt.Println("Capital of ", country, " is ", capital)
 	}
+
+	capital, exists := countryCapitalMap["USA"]
+	if exists {
+		fmt.Println("Capital of USA is ", capital)
+	} else {
+		fmt.Println("Capital of USA is not present")
+	}
 }
