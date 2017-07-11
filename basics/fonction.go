@@ -19,7 +19,7 @@ func Max(num1, num2 int) int {
 	return max(num1, num2)
 }
 
-func Swap(x, y string) (a, b string) {
+func SwapString(x, y string) (a, b string) {
 	a = y
 	b = x
 	return

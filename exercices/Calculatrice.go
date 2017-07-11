@@ -1,9 +1,16 @@
 package exercices
 
-import "fmt"
+import (
+	"fmt"
+	"errors"
+)
 
 // Calculatrice tordue
 type Operator func(int, int) int
+
+//type error interface {
+//	Error() string
+//}
 
 func Operation(op rune) (fonction Operator) {
 
@@ -23,8 +30,34 @@ func Operation(op rune) (fonction Operator) {
 	return
 }
 
-func Calcul(op rune, a, b int) int {
+func OperationUsingMap(o rune) (fonction Operator, e error){
 
-	return Operation(op)(a, b)
+	var op map[rune]Operator
+	op = make(map[rune]Operator, 4)
+
+	op['+'] = func(a, b int) int { return a + b }
+	op['-'] = func(a, b int) int { return a - b }
+	op['*'] = func(a, b int) int { return a * b }
+	op['/'] = func(a, b int) int { return a / b }
+
+	fn, exists := op[o]
+	if exists {
+		return fn, nil
+	} else {
+		return nil, errors.New("Not Implemented")
+	}
+
+}
+
+func Calcul(op rune, a, b int) {
+
+	//return Operation(op)(a, b)
+	o, e := OperationUsingMap(op)
+
+	if(e == nil) {
+		fmt.Println(o(a,b))
+	} else {
+		fmt.Println(e)
+	}
 
 }

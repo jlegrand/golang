@@ -27,7 +27,7 @@ func swap(x *int, y *int) {
 	*y = temp  // put temp into y
 }
 
-func Swap(a, b int) {
+func SwapPointers(a, b int) {
 	fmt.Printf("Before swap, value of a : %d\n", a)
 	fmt.Printf("Before swap, value of b : %d\n", b)
 

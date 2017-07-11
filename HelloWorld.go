@@ -3,8 +3,9 @@ package main
 
 import (
 	//"github.com/jlegrand/golang/basics"
-	"github.com/jlegrand/golang/exercices"
-	"fmt"
+	//"github.com/jlegrand/golang/exercices"
+	//"fmt"
+	"github.com/jlegrand/golang/basics"
 )
 
 func main() {
@@ -42,9 +43,11 @@ func main() {
 
 	//fmt.Println(exercice1([]int{1, 2, 3, 7, 8, 9}, 5))
 
-	//basics.MapBasics()
+	basics.MapBasics()
 
-	fmt.Println(exercices.Calcul('+', 3, 5 ))
+	//exercices.Calcul('t', 3, 5 )
+
+
 
 }
 
