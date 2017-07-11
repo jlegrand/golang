@@ -43,7 +43,7 @@ func main() {
 	//variables.Slice()
 	//variables.Append()
 
-	fmt.Println(exercice1([]int {1,2,3,7,8,9}, 5))
+	fmt.Println(exercice1([]int{1, 2, 3, 7, 8, 9}, 5))
 
 }
 
@@ -54,9 +54,15 @@ func exercice1(array []int, value int) (result []int) {
 		i++
 	}
 
-	result = append(append(array[:i],value),array[i+1:]...)
+	var head, tail []int = array[:i], array[i:]
+
+	fmt.Println(head)
+	fmt.Println(tail)
+	var tmp = append(head, value)
+	fmt.Println(tmp)
+
+	result = append(tmp, tail...)
+	fmt.Println(result)
 
 	return
 }
-
-
