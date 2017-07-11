@@ -2,6 +2,7 @@
 package main
 
 import (
+	"github.com/jlegrand/golang/exercices"
 	"github.com/jlegrand/golang/basics"
 )
 
@@ -44,7 +45,9 @@ func main() {
 
 	//exercices.Calcul('t', 3, 5 )
 
-	basics.Defer()
+	//basics.Defer()
+
+	basics.OrderedDefer()
 
 }
 

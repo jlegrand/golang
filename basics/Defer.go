@@ -28,3 +28,18 @@ func g(i int) {
 	fmt.Println("Printing in g ", i)
 	g(i+1)
 }
+
+func OrderedDefer() {
+
+	defer func() {
+		fmt.Println("defer 1")
+	}()
+
+	defer func() {
+		fmt.Println("defer 2")
+	}()
+
+	defer func() {
+		fmt.Println("defer 3")
+	}()
+}
