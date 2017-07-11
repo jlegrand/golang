@@ -2,7 +2,7 @@ package variables
 
 import "fmt"
 
-func Basics() {
+func MapBasics() {
 
 	var countryCapitalMap map[string]string
 	countryCapitalMap = make(map[string]string)

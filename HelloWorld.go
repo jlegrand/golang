@@ -4,9 +4,10 @@ package main
 import (
 	//"fmt"
 	//"github.com/jlegrand/golang/boucles"
-	"github.com/jlegrand/golang/variables"
+	//"github.com/jlegrand/golang/variables"
 	//"github.com/jlegrand/golang/pointers"
 	//"github.com/jlegrand/golang/fonction"
+	"github.com/jlegrand/golang/exercices"
 	"fmt"
 )
 
@@ -45,7 +46,9 @@ func main() {
 
 	//fmt.Println(exercice1([]int{1, 2, 3, 7, 8, 9}, 5))
 
-	variables.Basics()
+	//variables.MapBasics()
+
+	fmt.Println(exercices.Calcul('+', 3, 5 ))
 
 }
 
