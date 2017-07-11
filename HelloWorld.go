@@ -55,6 +55,8 @@ func main() {
 	time.Sleep(22 * time.Second)*/
 
 	//basics.Chan()
-	exercices.Primary2()
+	//exercices.Primary2()
+	//basics.Select()
+	exercices.MakeCakeAndSend()
 
 }

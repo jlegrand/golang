@@ -15,9 +15,9 @@ func Primary() {
 
 func Primary2() {
 
-	in := make(chan int)
+	in := make(chan int, 4)
 	out := make(chan int)
-	go primaryWithRoutine(in, out)
+	primaryWithRoutine(in, out)
 
 	go func() {
 		for e := range out {
@@ -32,17 +32,17 @@ func Primary2() {
 	in <- 3
 	in <- 10
 
-	/*in <- 15
-	in <- 25*/
+	in <- 15
+	in <- 25
 
-	time.Sleep(20 * time.Second)
+	time.Sleep(5 * time.Second)
 
 
 }
 
 func primaryWithRoutine(in chan int, out chan int) () {
 
-	//go func() {
+	go func() {
 		min := <- in
 		max := <- in
 		c := search(min, max)
@@ -51,7 +51,7 @@ func primaryWithRoutine(in chan int, out chan int) () {
 		}
 		out <- -1
 		//close(out)
-	//}()
+	}()
 }
 
 func search(min, max int) <-chan int {
