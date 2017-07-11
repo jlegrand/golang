@@ -12,7 +12,7 @@ func Primary() {
 	}
 }
 
-func search(min, max int) chan int {
+func search(min, max int) <-chan int {
 
 	c := make(chan int)
 
