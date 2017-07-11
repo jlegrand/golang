@@ -54,14 +54,18 @@ func exercice1(array []int, value int) (result []int) {
 		i++
 	}
 
+	fmt.Println(i)
+
 	var head, tail []int = array[:i], array[i:]
+	result = make([]int, i)
 
 	fmt.Println(head)
 	fmt.Println(tail)
-	var tmp = append(head, value)
-	fmt.Println(tmp)
-
-	result = append(tmp, tail...)
+	copy(result, head)
+	fmt.Println(result)
+	result = append(result, value)
+	fmt.Println(result)
+	result = append(result, tail...)
 	fmt.Println(result)
 
 	return
