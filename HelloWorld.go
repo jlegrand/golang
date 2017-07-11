@@ -43,6 +43,20 @@ func main() {
 	//variables.Slice()
 	//variables.Append()
 
+	fmt.Println(exercice1([]int {1,2,3,7,8,9}, 5))
+
+}
+
+func exercice1(array []int, value int) (result []int) {
+
+	var i, l int = 0, len(array)
+	for (i < l && array[i] < value) {
+		i++
+	}
+
+	result = append(append(array[:i],value),array[i+1:]...)
+
+	return
 }
 
 
