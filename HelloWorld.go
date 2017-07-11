@@ -29,7 +29,8 @@ func main() {
 
 	//variables.Manipulate()
 	//variables.Array()
-	variables.Slice()
+	//variables.Slice()
+	variables.Append()
 
 }
 
