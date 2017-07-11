@@ -12,7 +12,7 @@ func Basics() {
 	countryCapitalMap["Japan"] = "Tokyo"
 	countryCapitalMap["India"] = "New Delhi"
 
-	for country := range countryCapitalMap {
-		fmt.Println("Capital of ", country, " is ", countryCapitalMap[country])
+	for country, capital := range countryCapitalMap {
+		fmt.Println("Capital of ", country, " is ", capital)
 	}
 }
