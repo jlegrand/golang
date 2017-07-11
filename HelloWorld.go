@@ -4,7 +4,7 @@ package main
 import (
 	//"fmt"
 	//"github.com/jlegrand/golang/boucles"
-	//"github.com/jlegrand/golang/variables"
+	"github.com/jlegrand/golang/variables"
 	//"github.com/jlegrand/golang/pointers"
 	//"github.com/jlegrand/golang/fonction"
 	"fmt"
@@ -43,7 +43,9 @@ func main() {
 	//variables.Slice()
 	//variables.Append()
 
-	fmt.Println(exercice1([]int{1, 2, 3, 7, 8, 9}, 5))
+	//fmt.Println(exercice1([]int{1, 2, 3, 7, 8, 9}, 5))
+
+	variables.Basics()
 
 }
 
