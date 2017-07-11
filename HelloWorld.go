@@ -31,10 +31,10 @@ func main() {
 	// éclatement de la structure avec ...
 	fonction.FonctionVariadique([]int{9,8,7,6,5,4,3,2,1}...)*/
 
-	var t1 = []int{1,2,3}
+	/*var t1 = []int{1,2,3}
 	var t2 = []int{4,5,6}
 	var t []int = append(t1,t2...)
-	fmt.Println(t)
+	fmt.Println(t)*/
 
 	//pointers.Swap(10, 5)
 
