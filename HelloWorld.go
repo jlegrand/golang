@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/jlegrand/golang/basics"
+	"github.com/jlegrand/golang/exercices"
 )
 
 func main() {
@@ -63,6 +63,8 @@ func main() {
 
 	//basics.WaitGroup()
 
-	basics.Ticker()
+	//basics.Ticker()
+
+	exercices.Workers()
 
 }
