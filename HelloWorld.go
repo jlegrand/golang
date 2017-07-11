@@ -61,6 +61,8 @@ func main() {
 
 	//exercices.MakeCakeAndSend()
 
-	basics.WaitGroup()
+	//basics.WaitGroup()
+
+	basics.Ticker()
 
 }
