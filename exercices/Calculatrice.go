@@ -2,7 +2,6 @@ package exercices
 
 import (
 	"fmt"
-	"errors"
 )
 
 // Calculatrice tordue
@@ -44,7 +43,8 @@ func OperationUsingMap(o rune) (fonction Operator, e error){
 	if exists {
 		return fn, nil
 	} else {
-		return nil, errors.New("Not Implemented")
+		panic("Not implemented")
+		//return nil, errors.New("Not Implemented")
 	}
 
 }
@@ -52,12 +52,12 @@ func OperationUsingMap(o rune) (fonction Operator, e error){
 func Calcul(op rune, a, b int) {
 
 	//return Operation(op)(a, b)
-	o, e := OperationUsingMap(op)
+	o, error := OperationUsingMap(op)
 
-	if(e == nil) {
+	if(error == nil) {
 		fmt.Println(o(a,b))
 	} else {
-		fmt.Println(e)
+		fmt.Println(error)
 	}
 
 }
