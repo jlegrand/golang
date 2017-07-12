@@ -6,7 +6,9 @@ import (
 )
 
 type Provider interface {
-	Get(uint64 uint64) (*mail.Message, bool)
+	Get(uint64) (*mail.Message, bool)
+	Set(uint64, *mail.Message)
+	Del(uint64)
 }
 
 type MailCache struct{
@@ -44,6 +46,7 @@ func (m *MailCache) SetMail(id uint64, mail *mail.Message) {
 	m.rwMutex.Lock()
 	m.cache[id] = mail
 	m.rwMutex.Unlock()
+	//m.provider.Set(id, mail)
 }
 
 func (m *MailCache) DelMail(id uint64) {

@@ -49,7 +49,5 @@ func (m *Message) Send() {
 	}
 	fmt.Println("-- body --")
 	fmt.Println("  ", m.Body)
-
-	//mails[m.id] = m
 }
 
