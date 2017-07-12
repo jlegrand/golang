@@ -10,8 +10,8 @@ import (
 )
 
 //var _execNum int = 0
-const NB_MAILS int = 3000
-const NB_READ int = 200
+const NB_MAILS int = 5
+const NB_READ int = 20
 
 func main() {
 
@@ -40,7 +40,7 @@ func main() {
 
 }
 
-func printMail(id uint64, c *cache.MailCache) {
+func printMail(id uint64, c *cache.Cache) {
 	fmt.Println("***************")
 	fmt.Println("mail id ", id)
 	t1 := time.Now()
