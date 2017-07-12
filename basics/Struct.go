@@ -1,6 +1,9 @@
 package basics
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 type Book struct{
 	title string
@@ -43,4 +46,41 @@ func SendMail() {
 	m.header = make(map[string]string)
 
 	m.toFile("/tmp/out.mail")
+}
+
+
+////////////////////////////////////////
+
+type Circle struct{
+	x int
+	y int
+	radius float64
+}
+
+type Rectangle struct {
+	width, height float64
+}
+
+func (circle Circle) area() float64 {
+	return math.Pi * circle.radius * circle.radius
+}
+
+func (rectangle Rectangle) area() float64 {
+	return rectangle.width * rectangle.height
+}
+
+func UseArea() {
+	circle := Circle{x:0, y:0, radius:10}
+	rectangle := Rectangle{width:10, height:20}
+
+	fmt.Printf("Circle area : %f\n", getArea(circle))
+	fmt.Printf("Rectangle area : %f\n", getArea(rectangle))
+}
+
+type Shape interface {
+	area() float64
+}
+
+func getArea(shape Shape) float64 {
+	return shape.area()
 }

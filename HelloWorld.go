@@ -67,6 +67,7 @@ func main() {
 
 	//exercices.Workers()
 
-	basics.SendMail()
+	//basics.SendMail()
+	basics.UseArea()
 
 }
