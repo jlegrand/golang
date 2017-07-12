@@ -12,12 +12,12 @@ type ColorGroup struct {
 	ID int				`json:"uid" xml:"id,attr"`
 	Name string			`json:"nom,omitempty"`
 	Colors []string		`xml:"colors>color"`
-	comment string  // non exporté donc non marshallé
+	Comment string		`xml:",comment"`
 }
 
 func Json() {
 
-	group := ColorGroup{ ID: 1, Name:"Reds", Colors:[]string{"Crimson", "Red", "Ruby"}}
+	group := ColorGroup{ ID: 1, Name:"Reds", Colors:[]string{"Crimson", "Red", "Ruby"}, Comment:"commentaire"}
 
 	// Marshall JSON
 
