@@ -14,7 +14,7 @@ func Timer() {
 		fmt.Println((time.Now().Sub(start)))
 		t.Reset(randomDuration())
 	})
-	time.Sleep(2 * time.Second)
+	time.Sleep(500 * time.Millisecond)
 }
 
 func randomDuration() time.Duration {

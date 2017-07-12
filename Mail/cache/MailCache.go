@@ -9,22 +9,25 @@ type Provider interface {
 	Get(uint64 uint64) (*mail.Message, bool)
 }
 
-type Mail struct{
-	cache map[uint64]*mail.Message
+type MailCache struct{
+	cache    map[uint64]*mail.Message
 	provider Provider
-	mutex sync.RWMutex
+	rwMutex  sync.RWMutex
 }
 
-func NewCache(p Provider) *Mail {
-	var m *Mail = new(Mail)
+func NewCache(p Provider) *MailCache {
+	var m *MailCache = new(MailCache)
 	m.cache = make(map[uint64]*mail.Message)
 	m.provider = p
 	return m
 }
 
-func (m *Mail) GetMail(id uint64) (*mail.Message, bool) {
+func (m *MailCache) GetMail(id uint64) (*mail.Message, bool) {
 
-	if msg, ok := m.cache[id]; ok {
+	m.rwMutex.RLock()
+	msg, ok := m.cache[id]
+	m.rwMutex.RUnlock()
+	if ok {
 		return msg, ok
 	} else {
 		if msg, ok := m.provider.Get(id); ok {
@@ -37,10 +40,14 @@ func (m *Mail) GetMail(id uint64) (*mail.Message, bool) {
 	}
 }
 
-func (m *Mail) SetMail(id uint64, mail *mail.Message) {
+func (m *MailCache) SetMail(id uint64, mail *mail.Message) {
+	m.rwMutex.Lock()
 	m.cache[id] = mail
+	m.rwMutex.Unlock()
 }
 
-func (m *Mail) DelMail(id uint64) {
+func (m *MailCache) DelMail(id uint64) {
+	m.rwMutex.Lock()
 	delete(m.cache, id)
+	m.rwMutex.Unlock()
 }
