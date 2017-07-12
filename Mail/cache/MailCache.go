@@ -2,6 +2,7 @@ package cache
 
 import (
 	"github.com/jlegrand/golang/Mail/mail"
+	"sync"
 )
 
 type Provider interface {
@@ -11,6 +12,7 @@ type Provider interface {
 type Mail struct{
 	cache map[uint64]*mail.Message
 	provider Provider
+	mutex sync.RWMutex
 }
 
 func NewCache(p Provider) *Mail {
