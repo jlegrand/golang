@@ -7,8 +7,8 @@ import (
 )
 
 type ColorGroup struct {
-	ID int
-	Name string
+	ID int				`json:"uid"`
+	Name string			`json:"nom,omitempty"`
 	Colors []string
 }
 
