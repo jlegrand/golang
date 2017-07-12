@@ -8,9 +8,10 @@ import (
 )
 
 type ColorGroup struct {
-	ID int				`json:"uid"`
+	XMLName xml.Name	`xml:"GroupeDeCouleur"`
+	ID int				`json:"uid" xml:"id,attr"`
 	Name string			`json:"nom,omitempty"`
-	Colors []string
+	Colors []string		`xml:"colors>color"`
 	comment string  // non exporté donc non marshallé
 }
 
@@ -20,11 +21,12 @@ func Json() {
 
 	// Marshall JSON
 
-	b, err := json.Marshal(group)
+	b, err := json.MarshalIndent(group, "", "\t")
 	if err != nil {
 		fmt.Println("error: ", err)
 	}
 	os.Stdout.Write(b)
+	fmt.Println()
 	fmt.Println()
 
 	// Unmarshall JSON
@@ -33,17 +35,19 @@ func Json() {
 	err = json.Unmarshal(b, &colorGroup)
 	if err == nil {
 		fmt.Printf("%+v\n", colorGroup)
+		fmt.Println()
 	} else {
 		fmt.Println(err)
 	}
 
 	// Marshall XML
 
-	b, err = xml.Marshal(colorGroup)
+	b, err = xml.MarshalIndent(colorGroup, "", "\t")
 	if err != nil {
 		fmt.Println("error: ", err)
 	}
 	os.Stdout.Write(b)
+	fmt.Println()
 	fmt.Println()
 
 	// Unmarshall XML
