@@ -26,11 +26,20 @@ func main() {
 	r.Init()
 
 	c := cache.NewCache(r)
-	m := c.GetMail(2)
-	if m != nil {
+	m, ok := c.GetMail(2)
+	if ok {
 		fmt.Printf("%+v\n", m)
 	} else {
 		panic("Can't get mail")
 	}
+
+	m, ok = c.GetMail(10)
+	if ok {
+		fmt.Printf("%+v\n", m)
+	} else {
+		panic("Can't get mail")
+	}
+
+
 
 }

@@ -20,17 +20,17 @@ func NewCache(p Provider) *Mail {
 	return m
 }
 
-func (m *Mail) GetMail(id uint64) *mail.Message {
+func (m *Mail) GetMail(id uint64) (*mail.Message, bool) {
 
 	if msg, ok := m.cache[id]; ok {
-		return msg
+		return msg, ok
 	} else {
 		if msg, ok := m.provider.Get(id); ok {
 			m.SetMail(id, msg)
-			return msg
+			return msg, true
 		} else {
 			m.SetMail(id, nil)
-			return nil
+			return nil, false
 		}
 	}
 }
