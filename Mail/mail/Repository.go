@@ -9,10 +9,6 @@ type Repository struct {
 func NewRepository() *Repository {
 	var r *Repository = new(Repository)
 	r.mails = make(map[uint64]*Message)
-	return r
-}
-
-func (r *Repository) Init() {
 
 	var msg *Message
 	r.mails = make(map[uint64]*Message)
@@ -49,7 +45,7 @@ func (r *Repository) Init() {
 	msg.Body = "Hello"
 	r.mails[msg.id] = msg
 
-
+	return r
 }
 
 func (r *Repository) Get(index uint64) (*Message, bool) {
