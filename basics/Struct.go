@@ -69,18 +69,18 @@ func (rectangle Rectangle) area() float64 {
 	return rectangle.width * rectangle.height
 }
 
-func UseArea() {
-	circle := Circle{x:0, y:0, radius:10}
-	rectangle := Rectangle{width:10, height:20}
-
-	fmt.Printf("Circle area : %f\n", getArea(circle))
-	fmt.Printf("Rectangle area : %f\n", getArea(rectangle))
-}
-
 type Shape interface {
 	area() float64
 }
 
 func getArea(shape Shape) float64 {
 	return shape.area()
+}
+
+func UseArea() {
+	circle := Circle{radius:10}
+	rectangle := Rectangle{width:10, height:20}
+
+	fmt.Printf("Circle area : %f\n", getArea(circle))
+	fmt.Printf("Rectangle area : %f\n", getArea(rectangle))
 }
