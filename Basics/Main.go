@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/jlegrand/golang/basics"
+	"github.com/jlegrand/golang/Basics/basics"
 )
 
 func main() {
@@ -69,5 +69,6 @@ func main() {
 
 	//basics.SendMail()
 	basics.UseArea()
+
 
 }
