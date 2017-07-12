@@ -42,7 +42,7 @@ func Select() {
 	}
 }
 
-func Merge(cs ...<-chan int) {
+func Merge(cs ...<-chan int) chan int {
 
 	var wg sync.WaitGroup
 	out := make(chan int)

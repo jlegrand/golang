@@ -2,7 +2,7 @@
 package main
 
 import (
-	"github.com/jlegrand/golang/exercices"
+	"github.com/jlegrand/golang/basics"
 )
 
 func main() {
@@ -65,6 +65,8 @@ func main() {
 
 	//basics.Ticker()
 
-	exercices.Workers()
+	//exercices.Workers()
+
+	basics.SendMail()
 
 }
