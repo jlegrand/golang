@@ -70,7 +70,8 @@ func main() {
 	//basics.SendMail()
 	//basics.UseArea()
 
-	basics.Timer()
+	//basics.Timer()
+	basics.Json()
 
 
 }
