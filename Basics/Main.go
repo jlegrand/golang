@@ -71,7 +71,7 @@ func main() {
 	//basics.UseArea()
 
 	//basics.Timer()
-	basics.Json()
+	basics.UnmarshallData()
 
 
 }
