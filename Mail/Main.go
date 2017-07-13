@@ -22,7 +22,11 @@ func main() {
 	//testSync(r, c)
 	//testFileStorage(r, c)
 
-	server.Server()
+	go server.Server()
+
+	go server.Client()
+
+	time.Sleep(30 * time.Second)
 
 }
 
