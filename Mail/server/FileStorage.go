@@ -12,10 +12,10 @@ type provider struct {
 	mail_directory_path string
 }
 
-func NewProvider() *provider {
+func NewProvider(mail_directory_path string) *provider {
 
 	p := new(provider)
-	p.mail_directory_path = "C:/Users/A454023/.babun/cygwin/home/a454023/golang/src/github.com/jlegrand/golang/Mail/server/_store"
+	p.mail_directory_path = mail_directory_path
 	return p
 }
 

@@ -26,7 +26,7 @@ func main() {
 
 func testFileStorage(r *mail.Repository, c *cache.Cache) {
 
-	p := server.NewProvider()
+	p := server.NewProvider("C:/Users/A454023/.babun/cygwin/home/a454023/golang/src/github.com/jlegrand/golang/Mail/server/_store")
 
 	var msg *mail.Message
 	msg = mail.New()

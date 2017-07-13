@@ -1,6 +1,8 @@
 package test
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestReverse(t *testing.T) {
 
@@ -10,6 +12,11 @@ func TestReverse(t *testing.T) {
 	if actualResult != expectedResult {
 		t.Fatalf("Expected %s but got %s", expectedResult, actualResult)
 	}
+}
 
+func BenchmarkReverse(b *testing.B) {
+
+	Reverse("Hello")
+	b.StopTimer()
 
 }
