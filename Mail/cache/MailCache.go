@@ -30,7 +30,7 @@ type MailCache struct {
 func NewMailCache(mail *mail.Message) *MailCache {
 	x:= new(MailCache)
 	x.message = mail
-	x.timestamp = _ts
+	x.timestamp = atomic.AddUint64(&_ts, 10)
 	return x
 }
 
@@ -56,7 +56,7 @@ func NewCache(p Provider) *Cache {
 			c.rwMutex.Unlock()
 
 			// inceremente _ts de façon atomic
-			atomic.AddUint64(&_ts, 10)
+			atomic.AddUint64(&_ts, 1)
 		}
 	}(c)
 

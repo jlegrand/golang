@@ -8,3 +8,12 @@ https://golang.org/doc/
 
 https://gobyexample.com/
 
+# Packages
+io
+
+ioutil
+
+bytes
+
+os
+

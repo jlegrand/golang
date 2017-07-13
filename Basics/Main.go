@@ -71,7 +71,10 @@ func main() {
 	//basics.UseArea()
 
 	//basics.Timer()
-	basics.UnmarshallData()
+	//basics.Json()
+	//basics.UnmarshallData()
 
-
+	//basics.FileRead()
+	//basics.FileReadJsonWriteXML()
+	basics.FileOtherWriteMethod()
 }

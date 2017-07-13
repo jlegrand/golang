@@ -1,0 +1,10 @@
+{
+  "uid": 1,
+  "nom": "Reds",
+  "Colors": [
+    "Crimson",
+    "Red",
+    "Ruby"
+  ],
+  "Comment": "commentaire"
+}
