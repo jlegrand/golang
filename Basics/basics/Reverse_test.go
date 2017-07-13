@@ -34,6 +34,7 @@ func BenchmarkConcat(b *testing.B) {
 		b.Errorf("unexpected result; got=%s, want=%s", str, s)
 	}
 }
+
 func BenchmarkJoin(b *testing.B) {
 	var str string
 	var a []string
@@ -64,6 +65,7 @@ func BenchmarkCopy(b *testing.B) {
 		b.Errorf("unexpected result; got=%s, want=%s", string(bs), s)
 	}
 }
+
 func BenchmarkBuffer(b *testing.B) {
 	var buffer bytes.Buffer
 	for n := 0; n < b.N; n++ {

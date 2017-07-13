@@ -55,6 +55,22 @@ func TestProvider_Set(t *testing.T)  {
 	}
 }
 
+// go test -bench . -cpuprofile cpu.prof -memprofile mem.prof github.com/jlegrand/golang/Mail/server
+
+func BenchmarkProvider_Get(b *testing.B) {
+
+	p := NewProvider("C:/Users/A454023/.babun/cygwin/home/a454023/golang/src/github.com/jlegrand/golang/Mail/server/test/_store")
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		p.Get(1)
+	}
+
+	b.StopTimer()
+
+}
+
 func sha(filename string) []byte {
 	f, err := os.Open(filename)
 	if err != nil {
