@@ -76,5 +76,7 @@ func main() {
 
 	//basics.FileRead()
 	//basics.FileReadJsonWriteXML()
-	basics.FileOtherWriteMethod()
+	//basics.FileOtherWriteMethod()
+
+	basics.Server()
 }
