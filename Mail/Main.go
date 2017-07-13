@@ -16,11 +16,13 @@ const NB_READ int = 20
 
 func main() {
 
-	r := mail.NewRepository()
-	c := cache.NewCache(r)
+	//r := mail.NewRepository()
+	//c := cache.NewCache(r)
 
 	//testSync(r, c)
-	testFileStorage(r, c)
+	//testFileStorage(r, c)
+
+	server.Server()
 
 }
 

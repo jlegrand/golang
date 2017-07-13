@@ -3,21 +3,23 @@ package basics
 import (
 	"net/http"
 	"time"
-	"bytes"
 )
 
 type Handler struct {
-
 }
 
 func NewHandler() *Handler {
-	return new(Handler)
+	h := new(Handler)
+	return h
 }
 
 func (h *Handler) ServeHTTP( w http.ResponseWriter, r *http.Request) {
-	var buffer bytes.Buffer
-	buffer.WriteString("hello World !")
-	w.Write(buffer.Bytes())
+	//var buffer bytes.Buffer
+
+	w.Write([]byte(r.URL.String()[1:]))
+
+
+
 }
 
 func Server() {
@@ -34,6 +36,4 @@ func Server() {
 	panic(server.ListenAndServe())
 	
 }
-func handleConnection() {
 
-}
