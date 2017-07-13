@@ -1,4 +1,4 @@
-package test
+package basics
 
 func Reverse(s string) string {
 

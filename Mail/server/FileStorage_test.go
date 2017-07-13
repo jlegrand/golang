@@ -53,9 +53,6 @@ func TestProvider_Set(t *testing.T)  {
 	if bytes.Compare(sha(testing_store_path + "/1.json"), sha(testing_store_path + "/2.json")) != 0 {
 		t.Fatal("Invalid provider.Set")
 	}
-
-
-
 }
 
 func sha(filename string) []byte {
