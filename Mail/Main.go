@@ -7,6 +7,7 @@ import (
 	"time"
 	"strconv"
 	"math/rand"
+	"github.com/jlegrand/golang/Mail/server"
 )
 
 //var _execNum int = 0
@@ -17,6 +18,31 @@ func main() {
 
 	r := mail.NewRepository()
 	c := cache.NewCache(r)
+
+	//testSync(r, c)
+	testFileStorage(r, c)
+
+}
+
+func testFileStorage(r *mail.Repository, c *cache.Cache) {
+
+	p := server.NewProvider()
+
+	var msg *mail.Message
+	msg = mail.New()
+	msg.From = strconv.Itoa(1) + "@protonmail.com"
+	msg.To[0] = strconv.Itoa(1+1) + "@protonmail.com"
+	msg.Subject = strconv.Itoa(1) + "th mail"
+	msg.SetHeader("lang", "en")
+	msg.Body = "Hello"
+
+	p.Set(1, msg)
+
+	fmt.Printf("%+v\n", p.Get(1))
+
+}
+
+func testSync(r *mail.Repository, c *cache.Cache) {
 
 	var msg *mail.Message
 	for i := 0; i < NB_MAILS; i++ {
